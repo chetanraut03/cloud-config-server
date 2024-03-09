@@ -1,0 +1,19 @@
+eureka : 
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      defaultZone: http://localhost:8086/eureka/
+  intance:
+    hostname : locahost
+
+
+microservice:
+  payment-service:
+    endpoints:
+      endpoint:
+        uri: http://PAYMENT-SERVICE/sufin/payment/doPayment
+order-service:
+  endpoints:
+    endpoint:
+      uri: http://ORDER-SERVICE/sufin/order/bookOrder
